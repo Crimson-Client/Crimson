@@ -1,0 +1,35 @@
+<!-- The scroll film, kept for later (the owner took it off the site on 2026-10-16: "keep the video, don't delete it").
+     To bring it back: put this section in index.html where the hero section is, add <script src="js/film.js"></script>
+     after js/site.js, and copy media/crimson-scroll.mp4 + crimson-scroll-720.mp4 + film-start.jpg + film-end.jpg in
+     (made by tools/site-scene, see CLAUDE.md). The film's styles are still in css/site.css (.scroll-film, .film-*). -->
+  <section class="scroll-film" data-i18n-aria="filmLabel" aria-label="Crimson Client film">
+    <div class="film-stage">
+      <img class="film-still film-media" src="media/film-start.jpg" data-i18n-alt="alt.filmStart" alt="Crimson film opening aerial forest view" width="1920" height="1080" fetchpriority="high">
+      <video class="film-video film-media" muted playsinline preload="auto" aria-hidden="true"></video>
+      <div class="film-scrim"></div>
+      <div class="container film-intro hero">
+        <div class="hero-inner">
+          <div class="hud-counter" aria-hidden="true"><span>FPS</span>776</div>
+          <h1 data-i18n="hero">Play sharper.</h1>
+          <p class="hero-intro" data-i18n="intro">A free Minecraft client and launcher for Windows. Its own performance engine, a HUD you drag anywhere, friends, voice chat and cosmetics, in 1.8.9, 1.21.1 and 1.21.11.</p>
+          <div class="hero-ticks">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="ticks.0">Free</span></span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="ticks.1">No ads</span></span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="ticks.2">Java Edition 1.8.9 · 1.21.1 · 1.21.11</span></span>
+          </div>
+          <div class="film-scroll-hint"><span data-i18n="scroll">Scroll</span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-down"/></svg></div>
+        </div>
+      </div>
+      <div class="container film-captions">
+        <p class="film-caption" data-i18n="filmCaptions.0">Its own performance engine.</p>
+        <p class="film-caption" data-i18n="filmCaptions.1">A HUD you drag anywhere.</p>
+        <p class="film-caption" data-i18n="filmCaptions.2">Friends, voice chat and cosmetics.</p>
+      </div>
+      <a class="film-hotspot" hidden data-i18n-aria="downloadWindows" aria-label="Download for Windows"></a>
+      <div class="film-download-detail" hidden>
+        <p data-i18n="windows">Windows 10/11 · 64-bit</p>
+        <div class="film-download-note" role="status" hidden><span data-i18n="soon">Coming soon</span><a data-discord data-i18n="hearFirst" target="_blank" rel="noopener noreferrer">Join the Discord to hear first</a></div>
+      </div>
+      <div class="film-load-line" aria-hidden="true"></div>
+    </div>
+  </section>

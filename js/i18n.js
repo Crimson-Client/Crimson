@@ -3,7 +3,7 @@
 // alt text and labels).
 window.CRIMSON_TEXT = {
   en: {
-    scroll: 'Scroll', filmLabel: 'Crimson Client film',
+    scroll: 'Scroll', filmLabel: 'Crimson Client film', online: '{n} online now', inside: "See what's inside",
     filmCaptions: ['Its own performance engine.', 'A HUD you drag anywhere.', 'Friends, voice chat and cosmetics.'],
     launcherLabels: ['Crimson · Store', 'Crimson · Servers', 'Crimson · Settings'],
     launcherCaptions: ['Add mods from Modrinth and CurseForge in one click', 'Create a server for your friends from one window', 'Memory, window size, language and Java tuning'],
@@ -71,7 +71,7 @@ window.CRIMSON_TEXT = {
     },
   },
   ar: {
-    scroll: 'مرّر', filmLabel: 'فيلم Crimson Client',
+    scroll: 'مرّر', filmLabel: 'فيلم Crimson Client', online: '{n} متصل الآن', inside: 'اكتشف ما بداخله',
     filmCaptions: ['محرّك أداء خاص به.', 'واجهة HUD تحرّكها أينما شئت.', 'أصدقاء ودردشة صوتية ومظاهر.'],
     launcherLabels: ['Crimson · المتجر', 'Crimson · الخوادم', 'Crimson · الإعدادات'],
     launcherCaptions: ['أضف مودات من Modrinth وCurseForge بنقرة واحدة', 'أنشئ خادمًا لأصدقائك من نافذة واحدة', 'الذاكرة وحجم النافذة واللغة وضبط Java'],

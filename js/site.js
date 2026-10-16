@@ -1,5 +1,6 @@
-// The page: language (English unless the visitor picked Arabic), the download buttons, the header, the mobile
-// menu, the in-game menu tabs, and the rise-on-scroll of everything below the film.
+// The page: language (English unless the visitor picked Arabic), the download buttons (the big one in the middle
+// of the first screen downloads Crimson Setup straight away), the Discord online count, the header, the mobile
+// menu, the in-game menu tabs, and the rise-on-scroll of everything below the first screen.
 (function () {
   const C = window.CRIMSON, TEXT = window.CRIMSON_TEXT;
   const site = document.querySelector('.crimson-site');
@@ -10,13 +11,18 @@
 
   document.querySelectorAll('[data-discord]').forEach(a => { a.href = C.DISCORD_URL; });
 
-  function downloadControl(compact, t) {
+  function downloadControl(kind, t) {
     const url = C.DOWNLOAD_URL;
+    if (kind === 'hero') {                                 // the big button in the middle of the first screen
+      const inner = `<span class="hero-download-label">${esc(url ? t.download : t.soon)}</span><small>${esc(t.windows)}</small>`;
+      return url ? `<a class="hero-download" href="${esc(url)}" download>${inner}</a>` : `<span class="hero-download unavailable" aria-disabled="true">${inner}</span>`;
+    }
+    const compact = kind === 'compact';
     const label = url ? (compact ? t.download : t.downloadWindows) : t.soon;
     const inner = `<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg><span>${esc(label)}${compact ? '' : `<small>${esc(t.windows)}</small>`}</span>`;
     const cls = `btn crimson-button download-button${compact ? ' compact' : ''}`;
     const button = url
-      ? `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${inner}</a>`
+      ? `<a class="${cls}" href="${esc(url)}" download>${inner}</a>`
       : `<button type="button" class="${cls} unavailable" aria-disabled="true">${inner}</button>`;
     const note = !url && !compact
       ? `<a class="download-note" href="${esc(C.DISCORD_URL)}" target="_blank" rel="noopener noreferrer">${esc(t.hearFirst)}<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>`
@@ -68,7 +74,8 @@
     document.querySelectorAll('[data-i18n]').forEach(el => { const v = lookup(t, el.dataset.i18n); if (typeof v === 'string') el.textContent = v; });
     document.querySelectorAll('[data-i18n-alt]').forEach(el => { const v = lookup(t, el.dataset.i18nAlt); if (typeof v === 'string') el.alt = v; });
     document.querySelectorAll('[data-i18n-aria]').forEach(el => { const v = lookup(t, el.dataset.i18nAria); if (typeof v === 'string') el.setAttribute('aria-label', v); });
-    document.querySelectorAll('[data-download]').forEach(el => { el.innerHTML = downloadControl(el.dataset.download === 'compact', t); });
+    document.querySelectorAll('[data-download]').forEach(el => { el.innerHTML = downloadControl(el.dataset.download, t); });
+    showOnline();
     document.querySelectorAll('.language-button').forEach(b => {
       const on = b.dataset.lang === lang;
       b.classList.toggle('active', on);
@@ -81,9 +88,26 @@
     try { localStorage.setItem('crimson-language', b.dataset.lang); } catch { /* optional */ }
   }));
 
-  // --- header and mobile menu
+  // --- how many are on the Discord right now (only when the server's widget is switched on in Discord)
+  let online = null;
+  function showOnline() {
+    if (online === null) return;
+    document.querySelectorAll('.discord-online').forEach(el => { el.textContent = TEXT[lang].online.replace('{n}', online); el.hidden = false; });
+  }
+  if (C.DISCORD_SERVER_ID) {
+    fetch(`https://discord.com/api/guilds/${C.DISCORD_SERVER_ID}/widget.json`)
+      .then(r => (r.ok ? r.json() : null))
+      .then(j => { if (j && typeof j.presence_count === 'number') { online = j.presence_count; showOnline(); } })
+      .catch(() => { /* no widget: the button still works */ });
+  }
+
+  // --- header (see-through over the first screen) and mobile menu
   const header = document.querySelector('.site-header');
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 12);
+  const hero = document.querySelector('.hero-section');
+  const onScroll = () => {
+    header.classList.toggle('scrolled', window.scrollY > 12);
+    header.classList.toggle('over-film', !!hero && hero.getBoundingClientRect().bottom > 90);
+  };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
   const mobileNav = document.getElementById('mobile-navigation');
