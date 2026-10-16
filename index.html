@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crimson Client: free Minecraft client for PvP (1.8.9, 1.21.1, 1.21.11)</title>
+<meta name="description" content="A free Minecraft Java client and launcher for Windows. Performance, a customizable HUD, friends, voice chat and cosmetics. No ads. No cheats.">
+<meta property="og:title" content="Crimson Client: free Minecraft client for PvP (1.8.9, 1.21.1, 1.21.11)">
+<meta property="og:description" content="A free Minecraft Java client and launcher for Windows. Performance, a customizable HUD, friends, voice chat and cosmetics. No ads. No cheats.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="media/film-end.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/crimson-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&family=Pixelify+Sans&family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/site.css">
+<link rel="preload" as="image" href="media/film-start.jpg">
+</head>
+<body>
+<div class="crimson-site">
+<a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="site-header over-film">
+  <div class="container header-inner">
+    <a href="#" class="brand" aria-label="Crimson"><img src="img/crimson-logo.png" alt="" width="24" height="24">Crimson</a>
+    <nav class="header-nav" data-i18n-aria="navigation" aria-label="Main navigation">
+      <a href="#features" data-i18n="nav.0">Features</a><a href="#cosmetics" data-i18n="nav.1">Cosmetics</a><a href="#safety" data-i18n="nav.2">Safety</a><a href="#faq" data-i18n="nav.3">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <div class="language-control" data-i18n-aria="languageLabel" aria-label="Language">
+        <button type="button" class="btn quiet-button language-button active" data-lang="en" lang="en" aria-pressed="true">EN</button><span class="language-divider" aria-hidden="true">|</span><button type="button" class="btn quiet-button language-button" data-lang="ar" lang="ar" aria-pressed="false">عربي</button>
+      </div>
+      <a class="icon-link" data-discord data-i18n-aria="discord" aria-label="Join the Discord" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-discord"/></svg></a>
+      <div data-download="compact"></div>
+      <button type="button" class="btn quiet-button mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-navigation" data-i18n-aria="menu" aria-label="Open menu"><svg class="i-open" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-menu"/></svg><svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+  <nav id="mobile-navigation" class="mobile-nav" hidden data-i18n-aria="menu" aria-label="Open menu">
+    <a href="#features" data-i18n="nav.0">Features</a><a href="#cosmetics" data-i18n="nav.1">Cosmetics</a><a href="#safety" data-i18n="nav.2">Safety</a><a href="#faq" data-i18n="nav.3">FAQ</a>
+    <a data-discord data-i18n="discord" target="_blank" rel="noopener noreferrer">Join the Discord</a>
+    <div data-download="full"></div>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- The scroll film: scrolling moves the camera from above the forest, down the road, into the house. -->
+  <section class="scroll-film" data-i18n-aria="filmLabel" aria-label="Crimson Client film">
+    <div class="film-stage">
+      <img class="film-still film-media" src="media/film-start.jpg" data-i18n-alt="alt.filmStart" alt="Crimson film opening aerial forest view" width="1920" height="1080" fetchpriority="high">
+      <video class="film-video film-media" muted playsinline preload="auto" aria-hidden="true"></video>
+      <div class="film-scrim"></div>
+      <div class="container film-intro hero">
+        <div class="hero-inner">
+          <div class="hud-counter" aria-hidden="true"><span>FPS</span>776</div>
+          <h1 data-i18n="hero">Play sharper.</h1>
+          <p class="hero-intro" data-i18n="intro">A free Minecraft client and launcher for Windows. Its own performance engine, a HUD you drag anywhere, friends, voice chat and cosmetics, in 1.8.9, 1.21.1 and 1.21.11.</p>
+          <div class="hero-ticks">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="ticks.0">Free</span></span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="ticks.1">No ads</span></span>
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="ticks.2">Java Edition 1.8.9 · 1.21.1 · 1.21.11</span></span>
+          </div>
+          <div class="film-scroll-hint"><span data-i18n="scroll">Scroll</span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-down"/></svg></div>
+        </div>
+      </div>
+      <div class="container film-captions">
+        <p class="film-caption" data-i18n="filmCaptions.0">Its own performance engine.</p>
+        <p class="film-caption" data-i18n="filmCaptions.1">A HUD you drag anywhere.</p>
+        <p class="film-caption" data-i18n="filmCaptions.2">Friends, voice chat and cosmetics.</p>
+      </div>
+      <a class="film-hotspot" hidden data-i18n-aria="downloadWindows" aria-label="Download for Windows"></a>
+      <div class="film-download-detail" hidden>
+        <p data-i18n="windows">Windows 10/11 · 64-bit</p>
+        <div class="film-download-note" role="status" hidden><span data-i18n="soon">Coming soon</span><a data-discord data-i18n="hearFirst" target="_blank" rel="noopener noreferrer">Join the Discord to hear first</a></div>
+      </div>
+      <div class="film-load-line" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section id="features" class="section performance-section">
+    <div class="container feature-row">
+      <div class="section-copy">
+        <h2 data-i18n="performance">Fast where it counts</h2>
+        <p data-i18n="performanceText">Crimson runs its own performance engine on top of Sodium and Lithium, and keeps 1.8.9 tuned for old-combat PvP.</p>
+        <ul class="dot-list"><li data-i18n="performanceList.0">FPS, CPS, ping, keystrokes, armour and effects on screen</li><li data-i18n="performanceList.1">Minimap, world map and waypoints</li><li data-i18n="performanceList.2">Zoom, freelook, motion blur</li></ul>
+      </div>
+      <div class="media-column">
+        <figure class="screenshot-figure"><div class="window-frame"><div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-label" data-i18n="frameLabels.0">Crimson · 1.21.1</span><span class="window-end"></span></div><img class="game-screenshot" src="img/hud.jpg" data-i18n-alt="alt.hud" alt="Crimson HUD showing 776 FPS, keystrokes, armour, effects, compass and minimap" width="1920" height="1080" loading="lazy"></div><figcaption data-i18n="performanceCaption">Real screenshot · 1.21.1 · 1920×1080 · 776 FPS with the HUD on</figcaption></figure>
+        <p class="measurement" data-i18n="measurement">Measured on our test PC; your FPS depends on your hardware.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section menu-section">
+    <div class="container">
+      <div class="section-heading"><h2 data-i18n="menuTitle">Everything is one key away</h2><p data-i18n="menuSub">Press Right Shift in game.</p></div>
+      <figure class="screenshot-figure"><div class="window-frame">
+        <div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-label" data-i18n="frameLabels.1">Crimson</span><span class="window-end"></span></div>
+        <div class="tab-list" role="tablist" data-i18n-aria="menuTitle" aria-label="Everything is one key away">
+          <button type="button" class="btn quiet-button tab-button" role="tab" id="game-tab-0" aria-controls="game-panel" aria-selected="true" tabindex="0" data-i18n="tabs.0">Mods</button>
+          <button type="button" class="btn quiet-button tab-button" role="tab" id="game-tab-1" aria-controls="game-panel" aria-selected="false" tabindex="-1" data-i18n="tabs.1">Edit HUD</button>
+          <button type="button" class="btn quiet-button tab-button" role="tab" id="game-tab-2" aria-controls="game-panel" aria-selected="false" tabindex="-1" data-i18n="tabs.2">عربي</button>
+        </div>
+        <div id="game-panel" role="tabpanel" aria-labelledby="game-tab-0" tabindex="0"><img class="game-screenshot tab-image" src="img/mod-menu.jpg" data-i18n-alt="alt.mods" alt="Crimson mod menu with searchable HUD, PvP, survival and performance categories" width="1920" height="1080" loading="lazy"></div>
+      </div></figure>
+      <p class="pixel-label tab-caption" data-i18n="tabCaptions.0">HUD, PvP, Survival, SMP, Visual, Maps, Performance: search any mod</p>
+    </div>
+  </section>
+
+  <section class="section social-section">
+    <div class="container feature-row image-first">
+      <figure class="screenshot-figure"><div class="window-frame"><div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-label" data-i18n="frameLabels.2">Crimson · Chat</span><span class="window-end"></span></div><img class="game-screenshot" src="img/chat.jpg" data-i18n-alt="alt.chat" alt="Crimson chat with friends, server conversations and private messages" width="854" height="480" loading="lazy"></div><figcaption data-i18n="socialCaption">Real screenshot · chat window (Y)</figcaption></figure>
+      <div class="section-copy">
+        <h2 data-i18n="socialTitle">Your friends, on every server</h2>
+        <p data-i18n="socialText">Chat and talk with your friends wherever they play.</p>
+        <ul class="dot-list"><li data-i18n="socialList.0">Chat with everyone on Crimson, your server, private chats and groups</li><li data-i18n="socialList.1">Friend requests, online status and last online</li><li data-i18n="socialList.2">GIFs in chat</li><li data-i18n="socialList.3">Proximity voice chat with push-to-talk or open mic and positional sound</li><li data-i18n="socialList.4">Choose who hears you: everyone near, or friends only</li></ul>
+        <div class="pixel-label key-note" data-i18n="socialKey">Press Y in game.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cosmetics" class="section cosmetics-section">
+    <div class="container">
+      <div class="section-heading cosmetics-intro"><h2 data-i18n="cosmeticsTitle">Look like no one else</h2><p data-i18n="cosmeticsText">Capes with cloth that flows when you run and turn. Wings: Ember, Aurora and Archdevil. Halos, pets that follow you — Crimson Fox and Silver Cat — auras and glowing eyes. All in the wardrobe.</p></div>
+      <div class="cosmetics-layout">
+        <figure class="screenshot-figure"><div class="window-frame"><div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-label" data-i18n="frameLabels.3">Crimson · Wings</span><span class="window-end"></span></div><img class="game-screenshot" src="img/wings.jpg" data-i18n-alt="alt.wings" alt="Minecraft player wearing Crimson wings in a cherry grove" width="1920" height="1080" loading="lazy"></div><figcaption data-i18n="wingsCaption">Ember Wings, Golden Halo and the Beta Cape</figcaption></figure>
+        <div class="cosmetics-stack">
+          <figure class="screenshot-figure"><div class="window-frame"><div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-label" data-i18n="frameLabels.4">Crimson · Cosmetics</span><span class="window-end"></span></div><img class="game-screenshot" src="img/cosmetics.jpg" data-i18n-alt="alt.cosmetics" alt="Minecraft player showing a halo, cape and cosmetic effects" width="1920" height="1080" loading="lazy"></div><figcaption data-i18n="cosmeticsCaption">Real screenshot · front view at sunset</figcaption></figure>
+          <figure class="screenshot-figure"><div class="window-frame"><div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-label" data-i18n="frameLabels.5">Crimson · Wardrobe</span><span class="window-end"></span></div><img class="game-screenshot" src="img/wardrobe.jpg" data-i18n-alt="alt.wardrobe" alt="Crimson wardrobe with the Beta Cape on the player preview" width="1920" height="1080" loading="lazy"></div><figcaption data-i18n="wardrobeCaption">The wardrobe</figcaption></figure>
+        </div>
+      </div>
+      <div class="dances-heading"><h3 data-i18n="dancesTitle">Dances</h3><p data-i18n="dancesText">Dances with their own music. Press B to open the wheel, move to stop, M mutes the music.</p></div>
+      <div class="paired-windows">
+        <figure class="screenshot-figure"><div class="window-frame"><div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-label" data-i18n="frameLabels.6">Crimson · Dances</span><span class="window-end"></span></div><img class="game-screenshot" src="img/dance-wheel.jpg" data-i18n-alt="alt.wheel" alt="Crimson dance wheel with selectable dances" width="1920" height="1080" loading="lazy"></div><figcaption data-i18n="danceWheelCaption">The dance wheel (B)</figcaption></figure>
+        <figure class="screenshot-figure"><div class="window-frame"><div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-label" data-i18n="frameLabels.7">Crimson · Dance</span><span class="window-end"></span></div><img class="game-screenshot" src="img/dance.jpg" data-i18n-alt="alt.dance" alt="Player dancing Old School with a halo and wings at sunset" width="1920" height="1080" loading="lazy"></div><figcaption data-i18n="danceCaption">Real screenshot · Old School</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section launcher-section">
+    <div class="container">
+      <div class="launcher-heading">
+        <div><h2 data-i18n="launcherTitle">The launcher</h2><p data-i18n="launcherText">Pick a version, add mods, press Play.</p></div>
+        <ul class="dot-list"><li data-i18n="launcherList.0">Pick 1.8.9 (Classic PvP), 1.21.1 (Stable) or 1.21.11 (Latest), each with its own mods, settings and worlds</li><li data-i18n="launcherList.1">Add mods from Modrinth and CurseForge, or drop in your own jar</li><li data-i18n="launcherList.2">Performance pack on by default</li><li data-i18n="launcherList.3">Host a server for your friends from the launcher</li><li data-i18n="launcherList.4">Save clips of your best moments with F9</li></ul>
+      </div>
+      <div class="paired-windows launcher-windows">
+        <figure class="screenshot-figure"><div class="window-frame"><div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-label" data-i18n="frameLabels.8">Crimson · Versions</span><span class="window-end"></span></div><img class="game-screenshot" src="img/launcher-versions.jpg" data-i18n-alt="alt.versions" alt="Crimson launcher version picker: 1.21.11 Latest, 1.21.1 Stable, 1.8.9 Classic PvP" width="800" height="474" loading="lazy"></div><figcaption data-i18n="versionsCaption">Each version keeps its own folder</figcaption></figure>
+        <figure class="screenshot-figure"><div class="window-frame"><div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-label" data-i18n="launcherLabels.0">Crimson · Store</span><span class="window-end"></span></div><img class="game-screenshot wide" src="img/launcher-store.jpg" data-i18n-alt="alt.launcherStore" alt="Crimson launcher store with Modrinth and CurseForge mods" width="1440" height="900" loading="lazy"></div><figcaption data-i18n="launcherCaptions.0">Add mods from Modrinth and CurseForge in one click</figcaption></figure>
+        <figure class="screenshot-figure"><div class="window-frame"><div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-label" data-i18n="launcherLabels.1">Crimson · Servers</span><span class="window-end"></span></div><img class="game-screenshot wide" src="img/launcher-server.jpg" data-i18n-alt="alt.launcherServer" alt="Crimson launcher server creation window" width="1440" height="900" loading="lazy"></div><figcaption data-i18n="launcherCaptions.1">Create a server for your friends from one window</figcaption></figure>
+        <figure class="screenshot-figure"><div class="window-frame"><div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span class="window-label" data-i18n="launcherLabels.2">Crimson · Settings</span><span class="window-end"></span></div><img class="game-screenshot wide" src="img/launcher-settings.jpg" data-i18n-alt="alt.launcherSettings" alt="Crimson launcher memory, window, language and Java settings" width="1440" height="900" loading="lazy"></div><figcaption data-i18n="launcherCaptions.2">Memory, window size, language and Java tuning</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety" class="section safety-section">
+    <div class="container">
+      <div class="section-heading"><h2 data-i18n="safetyTitle">Safe by design</h2><p data-i18n="safetySub">Questions every player should ask a new client, answered.</p></div>
+      <ul class="safety-list">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><strong data-i18n="safety.0.0">Updates are signed.</strong><p data-i18n="safety.0.1">The launcher only installs updates signed with our key.</p></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><strong data-i18n="safety.1.0">You sign in through Microsoft’s own window.</strong><p data-i18n="safety.1.1">Crimson never sees your password.</p></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><strong data-i18n="safety.2.0">Your accounts stay on your PC.</strong><p data-i18n="safety.2.1">Protected by Windows.</p></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><strong data-i18n="safety.3.0">A built-in scanner.</strong><p data-i18n="safety.3.1">Blocks known account-stealing mods before they run.</p></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><strong data-i18n="safety.4.0">No ads.</strong><p data-i18n="safety.4.1">No selling your data.</p></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><strong data-i18n="safety.5.0">No cheats.</strong><p data-i18n="safety.5.1">Reach, knockback and hitboxes are never touched.</p></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg><div><strong data-i18n="safety.6.0">A clean uninstall.</strong><p data-i18n="safety.6.1">Uninstalling removes everything; your worlds go to the Recycle Bin only if you ask.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="faq" class="section faq-section">
+    <div class="container faq-layout">
+      <h2 data-i18n="faqTitle">A few things you might ask</h2>
+      <div class="faq-accordion">
+        <details class="faq-item"><summary class="faq-trigger" data-i18n="faq.0.0">Is Crimson free?</summary><div class="faq-content" data-i18n="faq.0.1">Yes. The client, the launcher and every built-in mod are free.</div></details>
+        <details class="faq-item"><summary class="faq-trigger" data-i18n="faq.1.0">Is it safe?</summary><div class="faq-content"><span data-i18n="faq.1.1">Updates are signed, you sign in through Microsoft, and accounts stay protected on your PC. A built-in scanner blocks known account-stealing mods. No ads or selling your data.</span><br><a href="#safety" class="safety-link" data-i18n="safetyLink">Read about safety</a></div></details>
+        <details class="faq-item"><summary class="faq-trigger" data-i18n="faq.2.0">Which versions?</summary><div class="faq-content" data-i18n="faq.2.1">1.8.9, 1.21.1 and 1.21.11, Java Edition.</div></details>
+        <details class="faq-item"><summary class="faq-trigger" data-i18n="faq.3.0">Can I use it on servers like Hypixel?</summary><div class="faq-content" data-i18n="faq.3.1">Crimson has no cheats and changes nothing about combat, so you can use it like any other client. Always follow each server’s rules.</div></details>
+        <details class="faq-item"><summary class="faq-trigger" data-i18n="faq.4.0">Mac or Linux?</summary><div class="faq-content" data-i18n="faq.4.1">Windows only for now.</div></details>
+        <details class="faq-item"><summary class="faq-trigger" data-i18n="faq.5.0">Do I need Java?</summary><div class="faq-content" data-i18n="faq.5.1">No, the launcher sets everything up.</div></details>
+        <details class="faq-item"><summary class="faq-trigger" data-i18n="faq.6.0">Can I add my own mods?</summary><div class="faq-content" data-i18n="faq.6.1">Yes: Fabric mods for 1.21.x, and Legacy Fabric for 1.8.9.</div></details>
+        <details class="faq-item"><summary class="faq-trigger" data-i18n="faq.7.0">Do I need a Minecraft account?</summary><div class="faq-content" data-i18n="faq.7.1">Sign in with your Microsoft account, like the official launcher.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-section">
+    <div class="container final-inner">
+      <h2 data-i18n="finalTitle">Ready to play sharper?</h2>
+      <div class="final-actions">
+        <div data-download="full"></div>
+        <a class="btn quiet-button discord-button" data-discord target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#i-discord"/></svg><span data-i18n="discord">Join the Discord</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a href="#" class="brand footer-brand"><img src="img/crimson-logo.png" alt="" width="22" height="22" loading="lazy">Crimson</a>
+      <span class="copyright" data-i18n="copyright">© 2026 Crimson Client</span>
+      <nav class="footer-links"><a data-discord data-i18n="discordName" target="_blank" rel="noopener noreferrer">Discord</a><a href="#faq" data-i18n="nav.3">FAQ</a><a href="#safety" data-i18n="nav.2">Safety</a></nav>
+    </div>
+    <p class="disclaimer" data-i18n="disclaimer">Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</p>
+  </div>
+</footer>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-discord" viewBox="0 0 24 24"><path d="M19.7 5.1a18 18 0 0 0-4.5-1.4l-.6 1.2a16.6 16.6 0 0 0-5.2 0l-.6-1.2a18 18 0 0 0-4.5 1.4C1.5 9.2.7 13.2 1.1 17.1a18 18 0 0 0 5.5 2.8l1.1-1.8-1.7-.8.4-.3a13 13 0 0 0 11.2 0l.4.3-1.7.8 1.1 1.8a18 18 0 0 0 5.5-2.8c.5-4.5-.9-8.4-3.2-12ZM8.6 14.8c-1.1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2Zm6.8 0c-1.1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2Z"/></symbol>
+</svg>
+
+<script src="js/config.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/site.js"></script>
+<script src="js/film.js"></script>
+</body>
+</html>
