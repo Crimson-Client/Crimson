@@ -8,14 +8,14 @@
 <meta property="og:title" content="Crimson Client: free Minecraft client for PvP (1.8.9, 1.21.1, 1.21.11)">
 <meta property="og:description" content="A free Minecraft Java client and launcher for Windows. Performance, a customizable HUD, friends, voice chat and cosmetics. No ads. No cheats.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="img/hero-house.jpg">
+<meta property="og:image" content="img/hero-cherry.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="img/crimson-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&family=Pixelify+Sans&family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="css/site.css">
-<link rel="preload" as="image" href="img/hero-house.jpg">
+<link rel="preload" as="image" href="img/hero-cherry.jpg" imagesrcset="img/hero-cherry-1280.jpg 1280w, img/hero-cherry.jpg 2560w" imagesizes="100vw">
 </head>
 <body>
 <div class="crimson-site">
@@ -44,14 +44,12 @@
 </header>
 
 <main id="main">
-  <!-- The first screen: the estate at dusk (a frame of our own Blender film; the film itself is kept in
-       archive/film-section.html), the name, one line, and the Download button in the middle. -->
+  <!-- The first screen: an official Minecraft wallpaper (Mojang, "Soothing Scenes": the cherry grove), sharp, with
+       the name, one line and the Download button on the left. -->
   <section class="hero-section" aria-labelledby="hero-title">
-    <img class="hero-bg" src="img/hero-house.jpg" alt="" width="1920" height="1080" fetchpriority="high">
-    <canvas class="hero-fireflies" aria-hidden="true"></canvas>
+    <img class="hero-bg" src="img/hero-cherry.jpg" srcset="img/hero-cherry-1280.jpg 1280w, img/hero-cherry.jpg 2560w" sizes="100vw" alt="" width="2560" height="1440" fetchpriority="high">
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="container hero-center">
-      <div class="hud-counter" aria-hidden="true"><span>FPS</span>776</div>
       <h1 id="hero-title" data-i18n="hero">Play sharper.</h1>
       <p class="hero-intro" data-i18n="intro">A free Minecraft client and launcher for Windows. Its own performance engine, a HUD you drag anywhere, friends, voice chat and cosmetics, in 1.8.9, 1.21.1 and 1.21.11.</p>
       <div data-download="hero"></div>
@@ -207,6 +205,5 @@
 <script src="js/config.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/site.js"></script>
-<script src="js/hero.js"></script>
 </body>
 </html>
